@@ -35,13 +35,15 @@ The following information is accurate as of 2020-12-08 / patch 5.4:
 
 ## TOC
 
+* Important - Read These First
+  - [Which OverlayPlugin fork am I supposed to use?](#which-overlayplugin-fork-am-i-supposed-to-use)
 * Troubleshooting stuff
   - [My ACT isn't showing any numbers. What can I do?](#my-act-isnt-showing-any-numbers-what-can-i-do)
   - [My overlay isn't updating / not showing](#my-overlay-isnt-updating--not-showing)
   - [My overlay only shows if I'm out of the game / alt-tabbed](#my-overlay-only-shows-if-im-out-of-the-game--alt-tabbed)
   - [My overlay shows over the game but stops updating](#my-overlay-shows-over-the-game-but-stops-updating)
   - [My overlay doesn't sort by DPS](#my-overlay-doesnt-sort-by-dps)
-  - [ngld OverlayPlugin failed because it couldn't download something](#ngld-overlayplugin-failed-because-it-couldn-t-download-something)
+  - [OverlayPlugin failed because it couldn't download something](#overlayplugin-failed-because-it-couldnt-download-something)
   - [OverlayPlugin complains that Newtonsoft.Json is outdated](#overlayplugin-complains-that-newtonsoftjson-is-outdated)
   - [OverlayPlugin complains that SharpCompress is outdated](#overlayplugin-complains-that-sharpcompress-is-outdated)
   - [Cactbot's config tab is empty](#cactbots-config-tab-is-empty)
@@ -49,10 +51,17 @@ The following information is accurate as of 2020-12-08 / patch 5.4:
   - [How do I install OverlayPlugin or Cactbot?](#how-do-i-install-overlayplugin-or-cactbot)
   - [How do I check my plugin versions?](#how-do-i-check-my-plugin-versions)
   - [Where are the log files saved?](#where-are-the-log-files-saved)
-  - [What is the difference between the ngld OverlayPlugin and hibiyasleep OverlayPlugin?](#what-is-the-difference-between-the-ngld-overlayplugin-and-hibiyasleep-overlayplugin)
+  - [What is ACTWS and how does it relate to OverlayPlugin?](#what-is-actws-and-how-does-it-relate-to-overlayplugin)
   - [Where can I find any documentation on the log file?](#where-can-i-find-any-documentation-on-the-log-file)
 * [Glossary](#glossary)
 * [Overlays](#overlays)
+
+## Important - Read These First
+
+### Which OverlayPlugin fork am I supposed to use?
+
+The correct version of OverlayPlugin is the [one in the OverlayPlugin org](https://github.com/OverlayPlugin/OverlayPlugin).
+Neither the hibiyasleep nor ngld versions are currently maintained.
 
 ## Troubleshooting stuff
 
@@ -102,20 +111,20 @@ your overlay settings.
 * `System.NullReferenceException - Object reference not set to an instance of an object.`<br>
   Remove your current OverlayPlugin (delete the files and the folder you *should* have created for the plugin), restart ACT, click the `Get Plugins` button on the Plugins tab and select OverlayPlugin from that list. This will install the latest OverlayPlugin for you.
 * `Could not load type 'RainbowMage.OverlayPlugin.EventSourseBase' from assembly 'OverlayPlugin.Core, ...'`<br>
-  You tried to use an addon or plugin which requires the ngld OverlayPlugin but you have the hibiyasleep version.
+  You tried to use an addon or plugin which requires a newer version of OverlayPlugin, but you are using an obsolete fork.
 
   You either have to look for a different download / build of the addon/plugin you're trying to use or
-  switch to the ngld OverlayPlugin.
+  switch to the newest OverlayPlugin.
 * `System.TypeLoadException - Could not load type 'System.ValueTuple``3' from assembly 'System.ValueTuple, ...`<br>
   Update your .NET framework to 4.7.1 or newer.
 
 Finally, here are some typical issues which can lead to an overlay showing up but not updating:
 
 * Remove your current overlay, click `New` and select the overlay from the preset list. That should fix any issues related to a wrong URL, ACTWS setting, etc.
-* If you're using ngld's OverlayPlugin, load it directly after the `FFXIV_ACT_Plugin.dll` to make sure no other plugin conflicts with it.
-* If you're trying to use MopiMopi or SkillDisplay with the ngld version, make sure you check the ACTWS checkbox.<br>
+* If you're using hibiyasleep's or ngld's OverlayPlugin, uninstall it and install the newest version.
+* If you're using the main OverlayPlugin fork, load it directly after the `FFXIV_ACT_Plugin.dll` to make sure no other plugin conflicts with it.
+* If you're trying to use MopiMopi or SkillDisplay with the mainline version, make sure you check the ACTWS checkbox.<br>
   If you're using *any* other overlay, uncheck that box since it can break overlays which don't support ACTWS (like Cactbot).
-* If you're using Cactbot, make sure you select the correct type (`Cactbot` for hibiyasleep and `MiniParse` for ngld).
 * Certain overlays like MopiMopi don't work with the hibiyasleep version.
 
 ### My overlay only shows if I'm out of the game / alt-tabbed
@@ -137,9 +146,9 @@ This is usually an issue with AMD's graphics driver. Make sure you disable AMD C
 
 ### My overlay doesn't sort by DPS
 
-If you're using the ngld OverlayPlugin, you have to enable sorting. Go to `Plugins` > `MiniParseEventSource` and set `Sort By` to `DPS`.
+You have to enable sorting. Go to `Plugins` > `MiniParseEventSource` and set `Sort By` to `DPS`.
 
-### ngld OverlayPlugin failed because it couldn't download something
+### OverlayPlugin failed because it couldn't download something
 
 Go to the OverlayPlugin tab. It'll tell you more about the file it tried to download. You'll be able to retry the download or manually download the required file there.
 
@@ -175,22 +184,15 @@ Next to that label, it will tell you the plugin version.
 
 ### Where are the log files saved?
 
-Go to Plugins > FFXIV Settings and look for the `Log file location`.
+Go to Plugins > FFXIV Settings and look for the `Log file location`. 
 
-### What is the difference between the ngld OverlayPlugin and hibiyasleep OverlayPlugin?
+The default location is `%appdata%\Advanced Combat Tracker\FFXIVLogs`. 
+If you have not customized the location, you can paste this into your start menu for quick access.
 
-* hibiyasleep's OverlayPlugin hasn't been updated in 2 years and thus uses an older version of Chromium to render
-  the overlays. That probably doesn't matter to you as a user but it means that overlays which work with the
-  hibiyasleep version can't use more recent features like modern ES JavaScript syntax, new CSS features, etc.
-* ngld's OverlayPlugin uses a single download for both x64 and x86 downloads to make installation easier.
-* ngld's OverlayPlugin integrates most of ACTWebSocket's features making the latter redundant.
-* ngld's OverlayPlugin added cutscene detection which automatically hides overlays during them. This feature
-  can be turned off in the plugin configuration if you don't want that.
-* ngld's OverlayPlugin allows you to assign the same hotkey to several overlays and doesn't require a restart
-  for hotkeys to become active.
-* ngld's OverlayPlugin offers more data for overlays.
-* For details check the [release notes](https://github.com/ngld/OverlayPlugin/releases) since they contain
-  the changes for each release.
+### What is ACTWS and how does it relate to OverlayPlugin?
+
+ACTWS was an older solution for exposing a WebSocket to transfer live data out of ACT.
+OverlayPlugin has since absorbed all of its functionality, making it obsolete.
 
 ### Where can I find any documentation on the log file?
 
@@ -223,14 +225,10 @@ specific questions.
   + UltraScouter<br>
     Extended HUD. Can display enemy HP values, remaining cast time, distance and direction of hunt marks, threat
     visualization, etc
-* OverlayPlugin ([hibiyasleep](https://github.com/hibiyasleep/OverlayPlugin/releases),
-  [ngld](https://github.com/ngld/OverlayPlugin/releases))<br>
+* [OverlayPlugin](https://github.com/OverlayPlugin/OverlayPlugin)<br>
   This plugin is used for most overlays. It effectively runs a Chromium browser in the background to render
   web pages on top of the game. Various information like the current DPS values are forwarded by the plugin to the
   web page to display.
-
-  For details on the difference between the two version,
-  [see above](#what-is-the-difference-between-the-ngld-overlayplugin-and-hibiyasleep-overlayplugin).
 * Parser<br>
   See **FFXIV ACT plugin** above.
 * Triggers<br>
