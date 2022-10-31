@@ -178,7 +178,9 @@ Next to that label, it will tell you the plugin version.
 ### Where are the log files saved?
 
 Go to Plugins > FFXIV Settings and look for the `Log file location`. 
-Or, search for `%appdata%\Advanced Combat Tracker\FFXIVLogs` in your start menu.
+
+The default location is `%appdata%\Advanced Combat Tracker\FFXIVLogs`. 
+If you have not customized the location, you can paste this into your start menu for quick access.
 
 ### Which OverlayPlugin fork am I supposed to use?
 
