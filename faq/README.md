@@ -143,8 +143,6 @@ You have to enable sorting. Go to `Plugins` > `MiniParseEventSource` and set `So
 
 Go to the OverlayPlugin tab. It'll tell you more about the file it tried to download. You'll be able to retry the download or manually download the required file there.
 
-If you're still having issues updating, make sure you are using the new OverlayPlugin fork, and not the ngld or hibiyasleep version.
-
 ### OverlayPlugin complains that Newtonsoft.Json is outdated
 
 Go to your ACT folder (that's where your `Advanced Combat Tracker.exe` is) and delete `Newtonsoft.Json.dll`. That file isn't part of ACT and most likely ended up there as part of a plugin. Please install plugins in `%AppData%\Advanced Combat Tracker\Plugins` or sub folders to avoid issues like this.
