@@ -185,7 +185,7 @@ Or, search for `%appdata%\Advanced Combat Tracker\FFXIVLogs` in your start menu.
 The correct version of OverlayPlugin is the [one in the OverlayPlugin org](https://github.com/OverlayPlugin/OverlayPlugin).
 Neither the hibiyasleep nor ngld versions are currently maintained.
 
-### What is ACTWS and how does it related to OverlayPlugin?
+### What is ACTWS and how does it relate to OverlayPlugin?
 
 ACTWS was an older solution for exposing a WebSocket to transfer live data out of ACT.
 OverlayPlugin has since absorbed all of its functionality, making it obsolete.
