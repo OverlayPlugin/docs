@@ -13,6 +13,7 @@ This guide is intended to get a FFXIV player setup with ACT and an overlay for p
   - [Adding Firewall Exception](#adding-firewall-exception)
 - [FFXIV ACT Plugin](#ffxiv-act-plugin)
 - [OverlayPlugin](#overlayplugin)
+  - [Using OverlayPlugin to End Encounters](#using-overlayplugin-to-end-encounters)
 - [Adding an Overlay](#adding-an-overlay)
   - [Preset Overlays](#preset-overlays)
   - [Custom Overlays](#custom-overlays)
