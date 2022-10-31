@@ -35,6 +35,8 @@ The following information is accurate as of 2020-12-08 / patch 5.4:
 
 ## TOC
 
+* Important - Read These First
+  - [Which OverlayPlugin fork am I supposed to use?](#which-overlayplugin-fork-am-i-supposed-to-use)
 * Troubleshooting stuff
   - [My ACT isn't showing any numbers. What can I do?](#my-act-isnt-showing-any-numbers-what-can-i-do)
   - [My overlay isn't updating / not showing](#my-overlay-isnt-updating--not-showing)
@@ -49,10 +51,17 @@ The following information is accurate as of 2020-12-08 / patch 5.4:
   - [How do I install OverlayPlugin or Cactbot?](#how-do-i-install-overlayplugin-or-cactbot)
   - [How do I check my plugin versions?](#how-do-i-check-my-plugin-versions)
   - [Where are the log files saved?](#where-are-the-log-files-saved)
-  - [Which OverlayPlugin fork am I supposed to use?](#which-overlayplugin-fork-am-i-supposed-to-use)
+  - [What is ACTWS and how does it relate to OverlayPlugin?](#what-is-actws-and-how-does-it-relate-to-overlayplugin)
   - [Where can I find any documentation on the log file?](#where-can-i-find-any-documentation-on-the-log-file)
 * [Glossary](#glossary)
 * [Overlays](#overlays)
+
+## Important - Read These First
+
+### Which OverlayPlugin fork am I supposed to use?
+
+The correct version of OverlayPlugin is the [one in the OverlayPlugin org](https://github.com/OverlayPlugin/OverlayPlugin).
+Neither the hibiyasleep nor ngld versions are currently maintained.
 
 ## Troubleshooting stuff
 
@@ -179,11 +188,6 @@ Go to Plugins > FFXIV Settings and look for the `Log file location`.
 
 The default location is `%appdata%\Advanced Combat Tracker\FFXIVLogs`. 
 If you have not customized the location, you can paste this into your start menu for quick access.
-
-### Which OverlayPlugin fork am I supposed to use?
-
-The correct version of OverlayPlugin is the [one in the OverlayPlugin org](https://github.com/OverlayPlugin/OverlayPlugin).
-Neither the hibiyasleep nor ngld versions are currently maintained.
 
 ### What is ACTWS and how does it relate to OverlayPlugin?
 
