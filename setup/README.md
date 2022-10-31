@@ -111,11 +111,11 @@ It is recommended to use OverlayPlugin's in/out-of-combat detection to split enc
 
 To do this, first set ACT's encounter split timeout (Options > Main Table/Encounters > General) to a large value, such as 60 seconds (or even higher, for duties with long cutscenes):
 
-![act timeout settings](https://user-images.githubusercontent.com/14287379/199086818-7509e165-70a8-49bc-b43c-2ccfa3a9235b.png)
+![act timeout settings](resources/act_timeout_settings.png)
 
 Then, under Plugins > OverlayPlugin.dll tab > Event Settings, enable "End ACT encounter after wipe" and "End ACT encounter out of combat":
 
-![overlayplugin event settings](https://user-images.githubusercontent.com/14287379/199087197-2bc875a0-9980-4a9d-923e-147d6a1b1ef5.png)
+![overlayplugin event settings](resources/op_event_settings.png)
 
 
 ## Adding an Overlay
