@@ -97,7 +97,7 @@ From the **Plugin Listing** tab, click on the `Get Plugins...` button near the u
 
 ![get_plugins](resources/get_plugins.png)
 
-In the **Get Plugins** window, select the `[FFXIV+others]Overlay Plugin` option and click on `Download and Enable`. This will add the latest **OverlayPlugin** to ACT (the OverlayPlugin auto-updater may also run during this step). Note that the number displayed next to the plugin may differ from the one shown here.
+In the **Get Plugins** window, select the `[FFXIV+others]Overlay Plugin` option and click on `Download and Enable`. This will add the latest **OverlayPlugin** to ACT (the OverlayPlugin auto-updater may also run during this step). 
 
 ![get_plugins_window](resources/get_plugins_window.png)
 
