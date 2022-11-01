@@ -13,6 +13,7 @@ This guide is intended to get a FFXIV player setup with ACT and an overlay for p
   - [Adding Firewall Exception](#adding-firewall-exception)
 - [FFXIV ACT Plugin](#ffxiv-act-plugin)
 - [OverlayPlugin](#overlayplugin)
+  - [Using OverlayPlugin to End Encounters](#using-overlayplugin-to-end-encounters)
 - [Adding an Overlay](#adding-an-overlay)
   - [Preset Overlays](#preset-overlays)
   - [Custom Overlays](#custom-overlays)
@@ -96,7 +97,7 @@ From the **Plugin Listing** tab, click on the `Get Plugins...` button near the u
 
 ![get_plugins](resources/get_plugins.png)
 
-In the **Get Plugins** window, select the `[FFXIV+others]Overlay Plugin` option and click on `Download and Enable`. This will add the latest ngld **OverlayPlugin** to ACT (the OverlayPlugin auto-updater may also run during this step).
+In the **Get Plugins** window, select the `[FFXIV+others]Overlay Plugin` option and click on `Download and Enable`. This will add the latest **OverlayPlugin** to ACT (the OverlayPlugin auto-updater may also run during this step). 
 
 ![get_plugins_window](resources/get_plugins_window.png)
 
@@ -104,11 +105,24 @@ The OverlayPlugin should now be setup. Click on the `X` to close the **Get Plugi
 
 **At this point it is recommended to restart ACT before continuing on.**
 
+### Using OverlayPlugin to End Encounters
+
+It is recommended to use OverlayPlugin's in/out-of-combat detection to split encounters, rather than ACT's less accurate behavior.
+
+To do this, first set ACT's encounter split timeout (Options > Main Table/Encounters > General) to a large value, such as 60 seconds (or even higher, for duties with long cutscenes):
+
+![act timeout settings](resources/act_timeout_settings.png)
+
+Then, under Plugins > OverlayPlugin.dll tab > Event Settings, enable "End ACT encounter after wipe" and "End ACT encounter out of combat":
+
+![overlayplugin event settings](resources/op_event_settings.png)
+
+
 ## Adding an Overlay
 
 ### Preset Overlays
 
-Ngld's OverlayPlugin comes with built-in presets for a majority of popular overlays. To setup an overlay go to **Plugins** > **OverlayPlugin.dll** and click on the `New` button. 
+OverlayPlugin comes with built-in presets for a majority of popular overlays. To setup an overlay go to **Plugins** > **OverlayPlugin.dll** and click on the `New` button. 
 
 ![new_overlay](resources/new_overlay.png)
 
