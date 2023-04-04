@@ -35,18 +35,44 @@ The setup program will ask you for the installation location and start menu fold
 
 ![act_installation](resources/act_installation.png)
 
-## Configuring ACT
+## FFXIV ACT Plugin
 
-### Running as Admin
-It is recommended that ACT be run as Admin. You can right click on the ACT shortcut and select the **Run as administrator** option. You may get an UAC prompt, select yes.
+Upon first running ACT, it will prompt you with the Startup Wizard. If you forget to download a parsing plugin, ACT will prompt you again the next time you run it, or you can manually open the wizard by going to **Options** > **Miscellaneous** > **Show Startup Wizard**.
+
+![startup_wizard](resources/startup_wizard.png)
+
+In the **Parsing Plugin** section of the startup wizard, ensure `FFXIV Parsing Plugin` is selected from the dropdown, then click the `Download/Enable Plugin` button. You will receive an alert when the plugin has been added to ACT. Click **Ok** to dismiss it.
+
+![parsing_plugin](resources/parsing_plugin.png)
+
+Click **Next** to move to the log file section. ACT will ask if it will be used for Final Fantasy XIV. Select **Yes** to configure ACT logs for FFXIV.
+
+![log_file](resources/log_file.png)
+
+Click **Next** to move to Startup Settings, then **Close** to accept the default settings and finish the startup wizard.
+
+At this point `FFXIV_ACT_Plugin.dll` should be enabled in **Plugins** > **Plugin Listing**.
+
+![ffxiv_act_plugin](resources/ffxiv_act_plugin.png)
+
+Next, you will need to decide whether you wish to use the older packet capture (PCAP) to gather the game's network traffic,
+or the newer Deucalion injection. Deucalion is not officially recommended as the default option yet, but does not require
+ACT to be started prior to logging in to your character, does not require the firewall exception, and does not require
+running as admin. On the other hand, it is potentially more dangerous should SE decide to take action against 
+injection-based plugins, and has not been as thoroughly tested as plain packet capture.
+
+### PCAP Method
+
+#### Running as Admin
+It is recommended that ACT be run as Admin. You can right-click on the ACT shortcut and select the **Run as administrator** option. You may get an UAC prompt, select yes.
 
 ![runas_admin](resources/runas_admin.png)
 
-You can also configure ACT to always run as admin by right clicking on the shortcut then selecting **Properties**. In the **Properties** window, select the **Compatibility** tab, then check the **Run this program as an administrator** option. Click **Apply** to save the changes. This will ensure ACT is always run as admin.
+You can also configure ACT to always run as admin by right-clicking on the shortcut then selecting **Properties**. In the **Properties** window, select the **Compatibility** tab, then check the **Run this program as an administrator** option. Click **Apply** to save the changes. This will ensure ACT is always run as admin.
 
 ![always_runas_admin](resources/always_runas_admin.png)
 
-### Adding Firewall Exception
+#### Adding Firewall Exception
 Open the windows **Control Panel** (you can search for control panel in the taskbar search bar). Select the **System and Security** category and under **Windows Defender Firewall** click on **Allow an app through Windows Firewall**. 
 
 ![control_panel](resources/control_panel.png)
@@ -71,25 +97,11 @@ Back in the dialog window, click on **Add** to add ACT to the windows firewall e
 
 ![allowed_apps_act](resources/allowed_apps_act.png)
 
-## FFXIV ACT Plugin
+### Injection Method
 
-Upon first running ACT, it will prompt you with the Startup Wizard. If you forget to download a parsing plugin, ACT will prompt you again the next time you run it, or you can manually open the wizard by going to **Options** > **Miscellaneous** > **Show Startup Wizard**.
+All you need to do to make use of injection is check this box:
 
-![startup_wizard](resources/startup_wizard.png)
-
-In the **Parsing Plugin** section of the startup wizard, ensure `FFXIV Parsing Plugin` is selected from the dropdown, then click the `Download/Enable Plugin` button. You will receive an alert when the plugin has been added to ACT. Click **Ok** to dismiss it.
-
-![parsing_plugin](resources/parsing_plugin.png)
-
-Click **Next** to move to the log file section. ACT will ask if it will be used for Final Fantasy XIV. Select **Yes** to configure ACT logs for FFXIV.
-
-![log_file](resources/log_file.png)
-
-Click **Next** to move to Startup Settings, then **Close** to accept the default settings and finish the startup wizard.
-
-At this point `FFXIV_ACT_Plugin.dll` should be enabled in **Plugins** > **Plugin Listing**.
-
-![ffxiv_act_plugin](resources/ffxiv_act_plugin.png)
+![Deucalion/Injection Checkbox](resources/deucalion_checkbox.png)
 
 ## OverlayPlugin
 
