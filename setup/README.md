@@ -121,7 +121,8 @@ The OverlayPlugin should now be setup. Click on the `X` to close the **Get Plugi
 
 It is recommended to use OverlayPlugin's in/out-of-combat detection to split encounters, rather than ACT's less accurate behavior.
 
-To do this, first find ACT's encounter split timeout (Options > Main Table/Encounters > General). Either disable it entirely by un-checking the box, or set it to a relatively large value:
+To do this, first find ACT's encounter split timeout (Options > Main Table/Encounters > General).
+It is recommended to disable it entirely by un-checking both `Number of seconds to wait` checkboxes:
 
 ![ACT Timeout Settings](resources/act_timeout_settings.png)
 
