@@ -196,7 +196,7 @@ OverlayPlugin has since absorbed all of its functionality, making it obsolete.
 
 ### Where can I find any documentation on the log file?
 
-[Cactbot's log guide](https://github.com/quisquous/cactbot/blob/master/docs/LogGuide.md) is the best we currently
+[Cactbot's log guide](https://github.com/OverlayPlugin/cactbot/blob/main/docs/LogGuide.md) is the best we currently
 have. We don't have any real documentation on the parser itself but feel free to ask on Discord if you have any
 specific questions.
 
@@ -207,10 +207,10 @@ specific questions.
 * [ACTWS, ACTWebSocket](https://github.com/ZCube/ACTWebSocket/releases)<br>
   This plugin runs a web server which accepts WebSocket connections which allows other applications to use ACT's data.
   Not maintained anymore. Most of the functionality has been integrated into ngld's OverlayPlugin.
-* [Cactbot](https://github.com/quisquous/cactbot)<br>
+* [Cactbot](https://github.com/OverlayPlugin/cactbot)<br>
   A collection of various overlays. Raidboss can show you timelines for boss fights and dungeons, the eureka overlay
   can show you points of interest for eureka, oopsyraidsy can show you certain mistakes and why people die.
-* [FFXIV ACT plugin](https://github.com/ravahn/FFXIV_ACT_Plugin/releases)<br>
+* [FFXIV ACT plugin](https://github.com/ravahn/FFXIV_ACT_Plugin)<br>
   This plugin contains the FFXIV parser for ACT (there are other plugins which allow ACT to parse the data for other
   games). It captures the network packets sent/received by the game and additional data from memory and writes that
   information to a log file. ACT then reads that file and parses it with help from the plugin.
