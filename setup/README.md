@@ -61,9 +61,9 @@ At this point `FFXIV_ACT_Plugin.dll` should be enabled in **Plugins** > **Plugin
 
 Next, you will need to decide whether you wish to use the older packet capture (PCAP) to gather the game's network traffic,
 or the newer Deucalion injection. Deucalion is not officially recommended as the default option yet, but does not require
-ACT to be started prior to logging in to your character, does not require the firewall exception, and does not require
-running as admin. On the other hand, it is potentially more dangerous should SE decide to take action against 
-injection-based plugins, and has not been as thoroughly tested as plain packet capture.
+ACT to be started prior to logging in to your character, is not susceptible to breaking due to network issues, does not require
+the firewall exception, and does not require running as admin. On the other hand, it is potentially more dangerous should
+SE decide to take action against injection-based plugins, and has not been as thoroughly tested as plain packet capture.
 
 #### Injection Method
 
