@@ -61,7 +61,15 @@ ACT to be started prior to logging in to your character, does not require the fi
 running as admin. On the other hand, it is potentially more dangerous should SE decide to take action against 
 injection-based plugins, and has not been as thoroughly tested as plain packet capture.
 
+### Injection Method
+
+All you need to do to make use of injection is check this box:
+
+![Deucalion/Injection Checkbox](resources/deucalion_checkbox.png)
+
 ### PCAP Method
+
+If you enabled injection in the step above, you can skip to installing [OverlayPlugin](#overlayplugin).
 
 #### Running as Admin
 It is recommended that ACT be run as Admin. You can right-click on the ACT shortcut and select the **Run as administrator** option. You may get an UAC prompt, select yes.
@@ -96,12 +104,6 @@ Back in the dialog window, click on **Add** to add ACT to the windows firewall e
 `Advanced Combat Tracker` should now appear in the list of **Allowed apps and features**. Click **OK** and exit the Control Panel.
 
 ![Allowed Apps List](resources/allowed_apps_act.png)
-
-### Injection Method
-
-All you need to do to make use of injection is check this box:
-
-![Deucalion/Injection Checkbox](resources/deucalion_checkbox.png)
 
 ## OverlayPlugin
 
