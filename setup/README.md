@@ -2,16 +2,18 @@
 
 This guide is intended to get a FFXIV player setup with ACT and an overlay for parsing purposes and be able to upload logs to the FFLogs website.
 
-*Last updated: 2023-06-29*
+*Last updated: 2024-09-02*
 
 <img align="right" src="resources/act_logo.png" alt="act_logo" height="100" vspace="25">
 
 ## Contents
 - [Installing ACT](#installing-act)
-- [Configuring ACT](#configuring-act)
-  - [Running as Admin](#running-as-admin)
-  - [Adding Firewall Exception](#adding-firewall-exception)
 - [FFXIV ACT Plugin](#ffxiv-act-plugin)
+  - [Configuring FFXIV ACT Plugin](#configuring-ffxiv-act-plugin)
+    - [Injection Method](#injection-method)
+    - [PCAP Method](#pcap-method)
+      - [Running as Admin](#running-as-admin)
+      - [Adding Firewall Exception](#adding-firewall-exception)
 - [OverlayPlugin](#overlayplugin)
   - [Using OverlayPlugin to End Encounters](#using-overlayplugin-to-end-encounters)
 - [Adding an Overlay](#adding-an-overlay)
@@ -55,15 +57,25 @@ At this point `FFXIV_ACT_Plugin.dll` should be enabled in **Plugins** > **Plugin
 
 ![Plugin Listing Tab](resources/ffxiv_act_plugin.png)
 
+### Configuring FFXIV ACT Plugin
+
 Next, you will need to decide whether you wish to use the older packet capture (PCAP) to gather the game's network traffic,
 or the newer Deucalion injection. Deucalion is not officially recommended as the default option yet, but does not require
-ACT to be started prior to logging in to your character, does not require the firewall exception, and does not require
-running as admin. On the other hand, it is potentially more dangerous should SE decide to take action against 
-injection-based plugins, and has not been as thoroughly tested as plain packet capture.
+ACT to be started prior to logging in to your character, is not susceptible to breaking due to network issues, does not require
+the firewall exception, and does not require running as admin. On the other hand, it is potentially more dangerous should
+SE decide to take action against injection-based plugins, and has not been as thoroughly tested as plain packet capture.
 
-### PCAP Method
+#### Injection Method
 
-#### Running as Admin
+All you need to do to make use of injection is check this box:
+
+![Deucalion/Injection Checkbox](resources/deucalion_checkbox.png)
+
+#### PCAP Method
+
+If you enabled injection in the step above, you can skip to installing [OverlayPlugin](#overlayplugin).
+
+##### Running as Admin
 It is recommended that ACT be run as Admin. You can right-click on the ACT shortcut and select the **Run as administrator** option. You may get an UAC prompt, select yes.
 
 ![Run as Admin Once](resources/runas_admin.png)
@@ -72,7 +84,7 @@ You can also configure ACT to always run as admin by right-clicking on the short
 
 ![Always Run as Admin](resources/always_runas_admin.png)
 
-#### Adding Firewall Exception
+##### Adding Firewall Exception
 Open the windows **Control Panel** (you can search for control panel in the taskbar search bar). Select the **System and Security** category and under **Windows Defender Firewall** click on **Allow an app through Windows Firewall**. 
 
 ![Where to Find Firewall Settings in Control Panel](resources/control_panel.png)
@@ -96,12 +108,6 @@ Back in the dialog window, click on **Add** to add ACT to the windows firewall e
 `Advanced Combat Tracker` should now appear in the list of **Allowed apps and features**. Click **OK** and exit the Control Panel.
 
 ![Allowed Apps List](resources/allowed_apps_act.png)
-
-### Injection Method
-
-All you need to do to make use of injection is check this box:
-
-![Deucalion/Injection Checkbox](resources/deucalion_checkbox.png)
 
 ## OverlayPlugin
 
