@@ -55,7 +55,7 @@ At this point `FFXIV_ACT_Plugin.dll` should be enabled in **Plugins** > **Plugin
 
 ### Configuring FFXIV ACT Plugin
 
-Deucalion is now the only method. There is no checkbox to tick, nor anything extra to install. everything in bundled with FFXIV_Parsing_Plugin.
+Previously, there were options to use other methods to capture network data, but as of patch 7.2 the only remaining option is Deucalion. Everything is included in the default plugin install, and no additional configuration steps are required.
 
 ##### Running as Admin
 It is no longer needed to run ACT as admin, and advised against.
