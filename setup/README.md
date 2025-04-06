@@ -61,7 +61,7 @@ Previously, there were options to use other methods to capture network data, but
 Most users will no longer need to run ACT as Admin. If you need to do so for some reason, you'll need to run FFXIV as Admin as well.
 
 ##### Adding Firewall Exception
-No longer needed because deucalion is the only option now
+Due to Deucalion being the only valid option as of patch 7.2, firewall exceptions are no longer needed.
 
 ## OverlayPlugin
 
