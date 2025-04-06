@@ -58,8 +58,7 @@ At this point `FFXIV_ACT_Plugin.dll` should be enabled in **Plugins** > **Plugin
 Previously, there were options to use other methods to capture network data, but as of patch 7.2 the only remaining option is Deucalion. Everything is included in the default plugin install, and no additional configuration steps are required.
 
 ##### Running as Admin
-It is no longer needed to run ACT as admin, and advised against.
-If you really need to, for some very specific reason, you'll need to run ffxiv as admin as well
+Most users will no longer need to run ACT as Admin. If you need to do so for some reason, you'll need to run FFXIV as Admin as well.
 
 ##### Adding Firewall Exception
 No longer needed because deucalion is the only option now
