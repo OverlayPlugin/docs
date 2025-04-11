@@ -2,7 +2,7 @@
 
 This guide is intended to get a FFXIV player setup with ACT and an overlay for parsing purposes and be able to upload logs to the FFLogs website.
 
-*Last updated: 2024-09-02*
+*Last updated: 2025-04-11*
 
 <img align="right" src="resources/act_logo.png" alt="act_logo" height="100" vspace="25">
 
@@ -59,6 +59,10 @@ At this point `FFXIV_ACT_Plugin.dll` should be enabled in **Plugins** > **Plugin
 
 ### Configuring FFXIV ACT Plugin
 
+As of FFXIV patch 7.2, Deucalion injection is no longer optional, and is enabled by default.  The older packet capture (PCAP) method
+is no longer available.  Furthermore, neither ACT nor FFXIV should not be run as administrator.
+
+<!--
 Next, you will need to decide whether you wish to use the older packet capture (PCAP) to gather the game's network traffic,
 or the newer Deucalion injection. Deucalion is not officially recommended as the default option yet, but does not require
 ACT to be started prior to logging in to your character, is not susceptible to breaking due to network issues, does not require
@@ -108,6 +112,7 @@ Back in the dialog window, click on **Add** to add ACT to the windows firewall e
 `Advanced Combat Tracker` should now appear in the list of **Allowed apps and features**. Click **OK** and exit the Control Panel.
 
 ![Allowed Apps List](resources/allowed_apps_act.png)
+-->
 
 ## OverlayPlugin
 

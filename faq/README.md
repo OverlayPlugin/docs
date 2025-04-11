@@ -89,7 +89,7 @@ Go to Plugins > FFXIV Settings and click `Test game connection`.
 
 * **It complains that it can't find the game process.**<br>
   Make sure you're running the correct ACT `.exe`. `Advanced Combat Tracker.exe` for the game in DirectX 11
-  mode (the default) and `ACTx86.exe` for the game in DirectX 9 mode.
+  mode and not `ACTx86.exe`. FFXIV no longer supports DirectX 9 mode.
 
 * **It complains that no recent network traffic has been received.**<br>
   Check if your firewall is interfering with the parser or if your VPN is causing problems.
