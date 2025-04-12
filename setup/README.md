@@ -10,10 +10,6 @@ This guide is intended to get a FFXIV player setup with ACT and an overlay for p
 - [Installing ACT](#installing-act)
 - [FFXIV ACT Plugin](#ffxiv-act-plugin)
   - [Configuring FFXIV ACT Plugin](#configuring-ffxiv-act-plugin)
-    - [Injection Method](#injection-method)
-    - [PCAP Method](#pcap-method)
-      - [Running as Admin](#running-as-admin)
-      - [Adding Firewall Exception](#adding-firewall-exception)
 - [OverlayPlugin](#overlayplugin)
   - [Using OverlayPlugin to End Encounters](#using-overlayplugin-to-end-encounters)
 - [Adding an Overlay](#adding-an-overlay)
@@ -59,60 +55,13 @@ At this point `FFXIV_ACT_Plugin.dll` should be enabled in **Plugins** > **Plugin
 
 ### Configuring FFXIV ACT Plugin
 
-As of FFXIV patch 7.2, Deucalion injection is no longer optional, and is enabled by default.  The older packet capture (PCAP) method
-is no longer available.  Furthermore, neither ACT nor FFXIV should not be run as administrator.
-
-<!--
-Next, you will need to decide whether you wish to use the older packet capture (PCAP) to gather the game's network traffic,
-or the newer Deucalion injection. Deucalion is not officially recommended as the default option yet, but does not require
-ACT to be started prior to logging in to your character, is not susceptible to breaking due to network issues, does not require
-the firewall exception, and does not require running as admin. On the other hand, it is potentially more dangerous should
-SE decide to take action against injection-based plugins, and has not been as thoroughly tested as plain packet capture.
-
-#### Injection Method
-
-All you need to do to make use of injection is check this box:
-
-![Deucalion/Injection Checkbox](resources/deucalion_checkbox.png)
-
-#### PCAP Method
-
-If you enabled injection in the step above, you can skip to installing [OverlayPlugin](#overlayplugin).
+Previously, there were options to use other methods to capture network data, but as of patch 7.2 the only remaining option is Deucalion. Everything is included in the default plugin install, and no additional configuration steps are required.
 
 ##### Running as Admin
-It is recommended that ACT be run as Admin. You can right-click on the ACT shortcut and select the **Run as administrator** option. You may get an UAC prompt, select yes.
-
-![Run as Admin Once](resources/runas_admin.png)
-
-You can also configure ACT to always run as admin by right-clicking on the shortcut then selecting **Properties**. In the **Properties** window, select the **Compatibility** tab, then check the **Run this program as an administrator** option. Click **Apply** to save the changes. This will ensure ACT is always run as admin.
-
-![Always Run as Admin](resources/always_runas_admin.png)
+Most users will no longer need to run ACT as Admin. If you need to do so for some reason, you'll need to run FFXIV as Admin as well.
 
 ##### Adding Firewall Exception
-Open the windows **Control Panel** (you can search for control panel in the taskbar search bar). Select the **System and Security** category and under **Windows Defender Firewall** click on **Allow an app through Windows Firewall**. 
-
-![Where to Find Firewall Settings in Control Panel](resources/control_panel.png)
-
-Inside the allowed apps window, click on **Change settings** button, then on the **Allow another app...** button. This will open up a dialog window to select an app.
-
-![Firewall Exceptions](resources/allowed_apps.png)
-
-Click on the **Browse...** button and navigate to the ACT install folder. The default location should be in `C:\Program Files (x86)\Advanced Combat Tracker`.
-
-![Add a Firewall Exception](resources/add_an_app.png)
-
-In the ACT folder, select the `Advanced Combat Tracker` application and click on **Open**.
-
-![Select Advanced Combat Tracker.exe](resources/select_act.png)
-
-Back in the dialog window, click on **Add** to add ACT to the windows firewall exceptions.
-
-![Finish Adding the Firewall Exception](resources/add_act.png)
-
-`Advanced Combat Tracker` should now appear in the list of **Allowed apps and features**. Click **OK** and exit the Control Panel.
-
-![Allowed Apps List](resources/allowed_apps_act.png)
--->
+Due to Deucalion being the only valid option as of patch 7.2, firewall exceptions are no longer needed.
 
 ## OverlayPlugin
 
