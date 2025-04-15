@@ -2,7 +2,7 @@
 
 This guide is intended to get a FFXIV player setup with ACT and an overlay for parsing purposes and be able to upload logs to the FFLogs website.
 
-*Last updated: 2024-09-02*
+*Last updated: 2025-04-11*
 
 <img align="right" src="resources/act_logo.png" alt="act_logo" height="100" vspace="25">
 
